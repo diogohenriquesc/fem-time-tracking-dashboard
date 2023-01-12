@@ -23,7 +23,112 @@
 
   <main>
     <section class="dashboard container">
-      
+      <div class="dashboard__wrapper">
+
+        <div class="dashboard__card dashboard__card--main">
+          <div class="dashboard__card-user-info">
+            <img class="dashboard__card-user-photo" src="./images/image-jeremy.png" alt="Jeremy Robson">
+            <p>Report for <br> <span class="dashboard__card-username">Jeremy Robson</span></p>
+          </div>
+
+          <div class="dashboard__card-controls">
+            <button class="dashboard__card-control">Daily</button>
+            <button class="dashboard__card-control" data-active>Weekly</button>
+            <button class="dashboard__card-control">Monthly</button>
+          </div>
+        </div>
+
+        <div class="dashboard__card dashboard__card--small" data-type="work">
+          <div class="dashboard__card-content">
+            <div class="dashboard__card-header">
+              <h2 class="dashboard__card-title">Work</h2>
+              <button class="dashboard__card-button" aria-label="Configuration button">
+                <img src="./images/icon-ellipsis.svg" alt="">
+              </button>
+            </div>
+
+            <div class="dashboard__card-time"> 
+              <p class="dashboard__card-current-time">32hrs</p>
+              <p class="dashboard__card-previous-time">Last Week - 36hrs</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard__card dashboard__card--small" data-type="play">
+          <div class="dashboard__card-content">
+            <div class="dashboard__card-header">
+              <h2 class="dashboard__card-title">Play</h2>
+              <button class="dashboard__card-button" aria-label="Configuration button">
+                <img src="./images/icon-ellipsis.svg" alt="">
+              </button>
+            </div>
+            <div class="dashboard__card-time">
+              <p class="dashboard__card-current-time">10hrs</p>
+              <p class="dashboard__card-previous-time">Last Week - 36hrs</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard__card dashboard__card--small" data-type="study">
+          <div class="dashboard__card-content">
+            <div class="dashboard__card-header">
+              <h2 class="dashboard__card-title">Study</h2>
+              <button class="dashboard__card-button" aria-label="Configuration button">
+                <img src="./images/icon-ellipsis.svg" alt="">
+              </button>
+            </div>
+            <div class="dashboard__card-time">
+              <p class="dashboard__card-current-time">4hrs</p>
+              <p class="dashboard__card-previous-time">Last Week - 7hrs</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard__card dashboard__card--small" data-type="exercise">
+          <div class="dashboard__card-content">
+            <div class="dashboard__card-header">
+              <h2 class="dashboard__card-title">Exercise</h2>
+              <button class="dashboard__card-button" aria-label="Configuration button">
+                <img src="./images/icon-ellipsis.svg" alt="">
+              </button>
+            </div>
+            <div class="dashboard__card-time">
+              <p class="dashboard__card-current-time">4hrs</p>
+              <p class="dashboard__card-previous-time">Last Week - 5hrs</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard__card dashboard__card--small" data-type="social">
+          <div class="dashboard__card-content">
+            <div class="dashboard__card-header">
+              <h2 class="dashboard__card-title">Social</h2>
+              <button class="dashboard__card-button" aria-label="Configuration button">
+                <img src="./images/icon-ellipsis.svg" alt="">
+              </button>
+            </div>
+            <div class="dashboard__card-time">
+              <p class="dashboard__card-current-time">5hrs</p>
+              <p class="dashboard__card-previous-time">Last Week - 10hrs</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard__card dashboard__card--small" data-type="self-care">
+          <div class="dashboard__card-content">
+            <div class="dashboard__card-header">
+              <h2 class="dashboard__card-title">Self Care</h2>
+              <button class="dashboard__card-button" aria-label="Configuration button">
+                <img src="./images/icon-ellipsis.svg" alt="">
+              </button>
+            </div>
+            <div class="dashboard__card-time">
+              <p class="dashboard__card-current-time">2hrs</p>
+              <p class="dashboard__card-previous-time">Last Week - 2hrs</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
   

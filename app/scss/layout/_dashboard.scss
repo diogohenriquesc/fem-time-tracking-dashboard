@@ -1,0 +1,208 @@
+@use '../abstracts' as *;
+
+.dashboard {
+	color: $white;
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: rem(24);
+		grid-template-areas:
+			'main'
+			'work'
+			'play'
+			'study'
+			'exercise'
+			'social'
+			'self-care';
+
+		@include breakpoint(medium) {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-areas:
+				'main main'
+				'work play'
+				'study exercise'
+				'social self-care';
+		}
+
+		@include breakpoint(large) {
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-areas:
+				'main work play study'
+				'main exercise social self-care';
+		}
+	}
+
+	&__card {
+		&--main {
+			border-radius: rem(15);
+			background-color: $darkBlue;
+			grid-area: main;
+		}
+
+		&--small {
+			border-radius: rem(15) rem(15) rem(20) rem(20);
+			padding-top: rem(38);
+			background-repeat: no-repeat;
+			background-position: top rem(-5) right rem(20);
+
+			@include breakpoint(large) {
+				padding-top: rem(45);
+			}
+
+			&[data-type='work'] {
+				background-color: $orange;
+				background-image: url('/images/icon-work.svg');
+				grid-area: work;
+			}
+
+			&[data-type='play'] {
+				background-color: $lightBlue;
+				background-image: url('/images/icon-play.svg');
+				grid-area: play;
+			}
+
+			&[data-type='study'] {
+				background-color: $red;
+				background-image: url('/images/icon-study.svg');
+				grid-area: study;
+			}
+
+			&[data-type='exercise'] {
+				background-color: $green;
+				background-image: url('/images/icon-exercise.svg');
+				grid-area: exercise;
+			}
+
+			&[data-type='social'] {
+				background-color: $violet;
+				background-image: url('/images/icon-social.svg');
+				grid-area: social;
+			}
+
+			&[data-type='self-care'] {
+				background-color: $yellow;
+				background-image: url('/images/icon-self-care.svg');
+				grid-area: self-care;
+			}
+		}
+	}
+
+  // Main card
+	&__card-user-info {
+		background-color: $blue;
+		padding: rem(35) rem(32);
+		border-radius: rem(15);
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		gap: rem(20);
+		font-size: rem(15);
+		color: $lightPurple;
+
+    @include breakpoint(large) {
+      align-items: flex-start;
+      flex-direction: column;
+      padding: rem(37) rem(32) rem(80);
+      gap: rem(43);
+    }
+	}
+
+	&__card-user-photo {
+		width: rem(64);
+		height: rem(64);
+		border-radius: 50%;
+		border: rem(3) solid $white;
+
+    @include breakpoint(large) {
+      width: rem(78);
+      height: rem(78);
+    }
+	}
+
+	&__card-username {
+		font-size: rem(24);
+		font-weight: 300;
+		color: $white;
+
+    @include breakpoint(large) {
+      font-size: rem(40);
+    }
+	}
+
+	&__card-controls {
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		padding: rem(25);
+		font-size: rem(18);
+
+		@include breakpoint(large) {
+			flex-direction: column;
+			align-items: flex-start;
+      gap: rem(21);
+		}
+	}
+
+	&__card-control {
+		all: unset;
+		color: $purple;
+		cursor: pointer;
+
+		&[data-active] {
+			color: $white;
+		}
+	}
+
+  // Small Card
+	&__card-content {
+		background-color: $darkBlue;
+		border-radius: rem(15);
+		padding: rem(28) rem(24);
+
+		@include breakpoint(large) {
+			padding: rem(32) rem(30);
+		}
+	}
+
+	&__card-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: rem(7);
+
+		@include breakpoint(large) {
+			margin-bottom: rem(24);
+		}
+	}
+
+	&__card-button {
+		all: unset;
+		cursor: pointer;
+		justify-self: end;
+	}
+
+	&__card-time {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@include breakpoint(large) {
+			display: block;
+		}
+	}
+
+	&__card-current-time {
+		font-weight: 300;
+		font-size: rem(32);
+
+		@include breakpoint(large) {
+			font-size: rem(56);
+		}
+	}
+
+	&__card-previous-time {
+		font-size: rem(15);
+		color: $lightPurple;
+	}
+}
