@@ -148,6 +148,11 @@
 		all: unset;
 		color: $purple;
 		cursor: pointer;
+		transition: all 200ms ease-in-out;	
+
+		&:hover {
+			color: $white;
+		}
 
 		&[data-active] {
 			color: $white;
@@ -159,9 +164,15 @@
 		background-color: $darkBlue;
 		border-radius: rem(15);
 		padding: rem(28) rem(24);
+		cursor: pointer;
+		transition: all 200ms ease-in-out;
 
 		@include breakpoint(large) {
 			padding: rem(32) rem(30);
+		}
+
+		&:hover {
+			background-color: $mediumDarkBlue;
 		}
 	}
 
@@ -179,7 +190,6 @@
 	&__card-button {
 		all: unset;
 		cursor: pointer;
-		justify-self: end;
 	}
 
 	&__card-time {
